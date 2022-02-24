@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "ukpktest.main" . }}
+  labels:
+    name: {{ include "ukpktest.main" . }}
+    {{- include "ukpktest.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.mainService.type }}
+  ports:
+    - port: {{ .Values.mainService.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    name: {{ include "ukpktest.main" . }}
+    {{- include "ukpktest.selectorLabels" . | nindent 4 }}

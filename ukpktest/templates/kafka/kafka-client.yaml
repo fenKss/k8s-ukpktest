@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: {{ include "ukpktest.fullname" . }}-kafka-client
+  labels:
+  {{- include "ukpktest.labels" . | nindent 4 }}
+spec:
+  containers:
+    - name: kafka-client
+      image: confluentinc/cp-kafka:5.0.1
+      command:
+        - sh
+        - -c
+        - "exec tail -f /dev/null"

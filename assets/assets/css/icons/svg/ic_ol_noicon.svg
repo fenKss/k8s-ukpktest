@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" data-name="Layer 1" viewBox="0 0 17 17">
+  <g data-name="ic ol noicon">
+    <path fill="none" d="M0 0h17v17H0z"/>
+    <path fill="#828282" d="M8.5 7.872L13.378 3l.622.63473L9.12876 8.5 14 13.36527 13.378 14 8.5 9.128 3.622 14 3 13.36527 7.87124 8.5 3 3.63473 3.622 3 8.5 7.872z"/>
+    <path fill="#e3e3e3" d="M1 14H0v3h3v-1H1v-2M0 3h1V1h2V0H0v3m14-3v1h2v2h1V0h-3m2 16h-2v1h3v-3h-1v2"/>
+  </g>
+</svg>

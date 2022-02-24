@@ -1,0 +1,26 @@
+<svg width="57px" height="72px" viewBox="0 0 57 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path d="M0,10.4970961 C0,4.97585239 4.47307265,0.5 10.0000316,0.5 L42.9999661,0.5 C48.522831,0.5 52.9999978,4.97481037 52.999998,10.4970961 L53,58.5029039 C53.0000002,64.0241476 48.5269275,68.5 42.9999683,68.5 L10.0000321,68.5 C4.47716687,68.5 0,64.0251896 0,58.5029039 L0,10.4970961 Z" id="path-1"></path>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.202587183 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-434.000000, -291.000000)">
+            <g transform="translate(359.000000, 290.000000)">
+                <g transform="translate(77.000000, 0.500000)">
+                    <g>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#FCFCFC" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                    <g transform="translate(8.000000, 16.500000)">
+                        <rect stroke="#D2D2D2" stroke-width="2" x="0" y="0" width="38" height="38" rx="6"></rect>
+                        <path d="M15.1955733,13.7766501 C16.3798128,12.5924106 16.3798128,10.672379 15.1955733,9.48813949 C14.0113338,8.30389998 12.0913022,8.30389998 10.9070627,9.48813949 C9.72282318,10.672379 9.72282318,12.5924106 10.9070627,13.7766501 C12.0913022,14.9608896 14.0113338,14.9608896 15.1955733,13.7766501 L15.1955733,13.7766501 Z M5.57255292,27.6760705 C4.21284187,30.0641108 5.35834025,32 8.12552497,32 L29.5257321,32 C32.2954106,32 33.3148893,30.1455851 31.7948259,27.8459828 L23.9847483,16.0306385 C23.0759388,14.6557612 21.5994832,14.6572565 20.6894247,16.0303087 L16.588674,22.2173233 C15.9807291,23.1345611 14.8224264,23.2667941 14.0155708,22.5255702 L12.6006745,21.2257654 C11.3839535,20.1080158 9.73807895,20.3602189 8.92296747,21.7917871 L5.57255292,27.6760705 L5.57255292,27.6760705 Z"  fill="#D2D2D2"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" data-name="Layer 1" viewBox="0 0 17 17">
+  <g data-name="ic information">
+    <path fill="none" d="M0 0h17v17H0z"/>
+    <path fill="#2f8e32" d="M6.00977 9.00635L8.5495 17H.15576z"/>
+    <path fill="#21B326" d="M8.5 17A8.5 8.5 0 1 0 0 8.5 8.5 8.5 0 0 0 8.5 17z"/>
+    <g fill="#fff">
+      <circle cx="8.5" cy="4.5" r="1"/>
+      <path d="M9.50464 12H9V7.491A.50085.50085 0 0 0 8.5 7h-1a.5.5 0 0 0 0 1H8v4h-.50464A.49389.49389 0 0 0 7 12.5a.503.503 0 0 0 .49536.5h2.00928A.49389.49389 0 0 0 10 12.5a.503.503 0 0 0-.49536-.5z"/>
+    </g>
+  </g>
+</svg>

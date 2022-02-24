@@ -1,0 +1,82 @@
+.pagination {
+  display: flex;
+  justify-content: flex-end; }
+  .pagination .wrapper {
+    background: #FFFFFF;
+    border: 1px solid #E1E1E1;
+    box-sizing: border-box;
+    border-radius: 4px; }
+  .pagination .btn {
+    padding: 7px 10px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 4px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.2px;
+    color: #333333; }
+    .pagination .btn:last-child {
+      margin-right: 0; }
+    .pagination .btn-iconed {
+      padding: 0; }
+    .pagination .btn.active {
+      background: #79dbff; }
+  .pagination .btn-group {
+    display: flex;
+    align-items: center;
+    margin: 0 16px; }
+    .pagination .btn-group .btn {
+      margin: 0; }
+    .pagination .btn-group.count {
+      margin-right: 0; }
+      .pagination .btn-group.count > div {
+        background: #F3F3F3; }
+      .pagination .btn-group.count i {
+        padding: 3px 3px 1px 2px; }
+      .pagination .btn-group.count input {
+        margin: 0;
+        padding: 5px 6px 5px 12px;
+        width: 20px;
+        height: 20px;
+        border: none;
+        -moz-appearance: textfield;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        max-width: 20px;
+        color: #212121; }
+        .pagination .btn-group.count input:focus {
+          border: none;
+          outline-style: none; }
+      .pagination .btn-group.count input::-webkit-outer-spin-button,
+      .pagination .btn-group.count input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0; }
+    .pagination .btn-group.date {
+      margin-left: 0;
+      margin-right: 0; }
+      .pagination .btn-group.date .chzn-container {
+        box-sizing: border-box;
+        background: url("../icons/svg/oah_icons/oah-sorting-up.svg") no-repeat 4px center;
+        padding-right: 5px;
+        padding-left: 25px;
+        width: 100px !important; }
+        .pagination .btn-group.date .chzn-container span {
+          font-weight: 600;
+          font-size: 13px;
+          line-height: 18px;
+          letter-spacing: -0.2px;
+          padding-top: 2px;
+          padding-left: 1px;
+          color: #212121; }
+        .pagination .btn-group.date .chzn-container a {
+          background: none;
+          border: none;
+          box-shadow: none; }
+        .pagination .btn-group.date .chzn-container b {
+          background: url("../icons/svg/oah_icons/oah-arrdown-thin-black.svg") no-repeat center center; }
+
+/*# sourceMappingURL=pagination.css.map */

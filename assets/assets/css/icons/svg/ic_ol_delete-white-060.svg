@@ -1,0 +1,6 @@
+<svg  data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+  <g data-name="ic ol delete">
+    <path fill="none" d="M0 0h17v17H0z"/>
+    <path d="M11 4V2.999A.99644.99644 0 0 0 10.00018 2H6.99982A.99687.99687 0 0 0 6 2.999V4H2v3h2v5.00189A1.99275 1.99275 0 0 0 5.99738 14h5.00525A1.99878 1.99878 0 0 0 13 12.00191V7h2V4h-4zM7 3h3v1H7V3zm5 9.00189A.99878.99878 0 0 1 11.00262 13H5.99738A.99276.99276 0 0 1 5 12.00191V7h1v4h1V7h1v4h1V7h1v4h1V7h1v5.00189zM14 6H3V5h11v1z" fill="rgba(255,255,255,0.6)"/>
+  </g>
+</svg>

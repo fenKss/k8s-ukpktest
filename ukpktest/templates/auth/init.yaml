@@ -1,0 +1,32 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ include "ukpktest.auth" . }}-job
+  labels:
+  {{- include "ukpktest.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": post-install
+    "helm.sh/hook-delete-policy": before-hook-creation,hook-failed,hook-succeeded
+spec:
+  backoffLimit: 100
+  template:
+    metadata:
+      name: {{ include "ukpktest.fullname" . }}
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: post-install-job-auth
+          image: {{.Values.authService.image.repository}}
+          imagePullPolicy: {{.Values.authService.image.pullPolicy}}
+          env:
+          {{- range $key, $value := .Values.authService.env }}
+            - name: {{ $value.name }}
+              valueFrom:
+                secretKeyRef:
+                  key: {{ $value.key }}
+                  name: {{- include "ukpktest.secret" $ | indent 4 }}
+          {{- end }}
+          command:
+            - sh
+            - "-c"
+            - {{ printf "mycli %s -e \"create database if not exists %s\" && php /tmp/app/bin/console doctrine:migrations:migrate --quiet" ( printf (include "db.url" .) "" ) .Values.authService.database }}

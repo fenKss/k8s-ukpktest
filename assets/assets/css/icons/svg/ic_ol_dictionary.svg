@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" data-name="Layer 1" viewBox="0 0 17 17">
+  <g data-name="ic ol globalData-Copy-4">
+    <path fill="none" d="M0 0h17v17H0z"/>
+    <g fill="#838383">
+      <path d="M12.99146 2H3v13h9.99146A2.0074 2.0074 0 0 0 15 12.99725v-8.9945A2.00365 2.00365 0 0 0 12.99146 2zM4 14V3h1v11H4zm10-1.00275A1.0074 1.0074 0 0 1 12.99146 14H6V3h6.99146A1.00369 1.00369 0 0 1 14 4.00275v8.99451z"/>
+      <path d="M7 7h4v1H7zm0-2h6v1H7zm0 4h6v1H7zm0 2h4v1H7z"/>
+    </g>
+  </g>
+</svg>

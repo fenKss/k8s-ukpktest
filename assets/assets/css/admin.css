@@ -1,0 +1,293 @@
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+}
+.pagination .wrapper {
+  background: #FFFFFF;
+  border: 1px solid #E1E1E1;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.pagination .btn {
+  padding: 7px 10px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 4px;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: -0.2px;
+  color: #333333;
+}
+.pagination .btn:last-child {
+  margin-right: 0;
+}
+.pagination .btn-iconed {
+  padding: 0;
+}
+.pagination .btn.active {
+  background: #79dbff;
+}
+.pagination .btn-group {
+  display: flex;
+  align-items: center;
+  margin: 0 16px;
+}
+.pagination .btn-group .btn {
+  margin: 0;
+}
+.pagination .btn-group.count {
+  margin-right: 0;
+}
+.pagination .btn-group.count > div {
+  background: #F3F3F3;
+}
+.pagination .btn-group.count i {
+  padding: 3px 3px 1px 2px;
+}
+.pagination .btn-group.count input {
+  margin: 0;
+  padding: 5px 6px 5px 12px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  -moz-appearance: textfield;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  max-width: 20px;
+  color: #212121;
+}
+.pagination .btn-group.count input:focus {
+  border: none;
+  outline-style: none;
+}
+.pagination .btn-group.count input::-webkit-outer-spin-button,
+.pagination .btn-group.count input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.pagination .btn-group.date {
+  margin-left: 0;
+  margin-right: 0;
+}
+.pagination .btn-group.date .chzn-container {
+  box-sizing: border-box;
+  background: url("../icons/svg/oah_icons/oah-sorting-up.svg") no-repeat 4px center;
+  padding-right: 5px;
+  padding-left: 25px;
+  width: 100px !important;
+}
+.pagination .btn-group.date .chzn-container span {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: -0.2px;
+  padding-top: 2px;
+  padding-left: 1px;
+  color: #212121;
+}
+.pagination .btn-group.date .chzn-container a {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+.pagination .btn-group.date .chzn-container b {
+  background: url("../icons/svg/oah_icons/oah-arrdown-thin-black.svg") no-repeat center center;
+}
+
+i.test-icon {
+  display: block;
+  width: 26px;
+  height: 26px;
+  background: none no-repeat center center;
+}
+i.test-icon.arrlink {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-arrlink2.svg");
+}
+i.test-icon.bubbles {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-bubbles.svg");
+}
+i.test-icon.arrdown-thin {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-arrdown-thin.svg");
+}
+i.test-icon.apply {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-apply.svg");
+}
+i.test-icon.arrow-left {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-arrow-left.svg");
+}
+i.test-icon.arrow-down {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-arrow-down.svg");
+}
+i.test-icon.arrow-right {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-arrow-right.svg");
+}
+i.test-icon.arrow-double-left {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-arrow-left-dual.svg");
+}
+i.test-icon.arrow-double-right {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-arrow-right-dual.svg");
+}
+i.test-icon.edit {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-edit.svg");
+}
+i.test-icon.edit_cms {
+  background-image: url("/assets/css/icons/svg/cms_s3.svg");
+}
+i.test-icon.print {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-print.svg");
+}
+i.test-icon.plus-circle {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-add-circle-large.svg");
+}
+i.test-icon.mail-incoming {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-mail-incoming.svg");
+}
+i.test-icon.settings {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-settings.svg");
+}
+i.test-icon.settings-dotted {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-settings-dotted.svg");
+}
+i.test-icon.copy {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-copy.svg");
+}
+i.test-icon.plus {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-add-crm.svg");
+}
+i.test-icon.plus.black {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-add-crm-black.svg");
+}
+i.test-icon.home {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-home.svg");
+}
+i.test-icon.draggable {
+  width: 7.5px;
+  height: 22.5px;
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-dragable.svg");
+  opacity: 0.4;
+}
+i.test-icon.trash {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-trash.svg");
+}
+i.test-icon.close {
+  width: 30px;
+  height: 30px;
+  background-image: url("/assets/css/icons/svg/ic-win-close.svg");
+}
+i.test-icon.notice-orange {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-notice-orange.svg");
+}
+i.test-icon.noticedenied-filled {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-noticedenied-filled.svg");
+}
+i.test-icon.noticedenied-red {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-noticedenied-red.svg");
+}
+i.test-icon.notice-green {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-noticegood2-green.svg");
+}
+i.test-icon.brush {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-brush.svg");
+}
+i.test-icon.user {
+  background-image: url("/assets/css/icons/svg/user_icon.svg");
+}
+i.test-icon.key {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-key.svg");
+}
+i.test-icon.devphone {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-devphone.svg");
+}
+i.test-icon.mail-new {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-mail-new.svg");
+}
+i.test-icon.spam {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-spam.svg");
+}
+i.test-icon.spam-grey {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-spam-grey.svg");
+}
+i.test-icon.social-vk {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-social-vk.svg");
+}
+i.test-icon.social-ya {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-social-yax.svg");
+}
+i.test-icon.social-fb {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-social-fb.svg");
+}
+i.test-icon.social-ok {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-social-ok.svg");
+}
+i.test-icon.social-tw {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-social-tw.svg");
+}
+i.test-icon.social-gplus {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-social-gplus.svg");
+}
+i.test-icon.social-mru {
+  background-image: url("/assets/css/icons/svg/oah_icons/oah-social-mru.svg");
+}
+i.test-icon.flag-ru {
+  width: 26px;
+  height: 18px;
+  background-image: url("/assets/css/icons/svg/flag-ru.svg");
+}
+
+#messages {
+  display: none;
+}
+
+.material-switch > input[type=checkbox] {
+  display: none;
+}
+
+.material-switch > label {
+  cursor: pointer;
+  height: 0px;
+  position: relative;
+  width: 40px;
+}
+
+.material-switch > label::before {
+  background: black;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  content: "";
+  height: 16px;
+  margin-top: -8px;
+  position: absolute;
+  opacity: 0.3;
+  transition: all 0.4s ease-in-out;
+  width: 40px;
+}
+
+.material-switch > label::after {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  content: "";
+  height: 24px;
+  left: -4px;
+  margin-top: -8px;
+  position: absolute;
+  top: -4px;
+  transition: all 0.3s ease-in-out;
+  width: 24px;
+}
+
+.material-switch > input[type=checkbox]:checked + label::before {
+  background: inherit;
+  opacity: 0.5;
+}
+
+.material-switch > input[type=checkbox]:checked + label::after {
+  background: inherit;
+  left: 20px;
+}
+
+/*# sourceMappingURL=admin.css.map */

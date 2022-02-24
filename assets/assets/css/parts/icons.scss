@@ -1,0 +1,179 @@
+i.test-icon {
+  display: block;
+  width: 26px;
+  height: 26px;
+  background: none no-repeat center center;
+
+  &.arrlink {
+    background-image: url("/assets/css/icons/svg/oah_icons/oah-arrlink2.svg");
+  }
+  &.bubbles{
+    background-image: url("/assets/css/icons/svg/oah_icons/oah-bubbles.svg");
+  }
+  &.arrdown-thin {
+    background-image: url("/assets/css/icons/svg/oah_icons/oah-arrdown-thin.svg");
+  }
+
+  &.apply{
+    background-image: url("/assets/css/icons/svg/oah_icons/oah-apply.svg");
+  }
+
+  &.arrow{
+    &-left{
+      background-image: url("/assets/css/icons/svg/oah_icons/oah-arrow-left.svg");
+    }
+    &-down{
+      background-image: url("/assets/css/icons/svg/oah_icons/oah-arrow-down.svg");
+    }
+    &-right{
+      background-image: url("/assets/css/icons/svg/oah_icons/oah-arrow-right.svg");
+    }
+    &-double{
+      &-left{
+        background-image: url("/assets/css/icons/svg/oah_icons/oah-arrow-left-dual.svg");
+      }
+      &-right{
+        background-image: url("/assets/css/icons/svg/oah_icons/oah-arrow-right-dual.svg");
+      }
+    }
+  }
+  &.edit {
+    background-image: url("/assets/css/icons/svg/oah_icons/oah-edit.svg");
+  }
+
+  &.edit_cms {
+    background-image: url("/assets/css/icons/svg/cms_s3.svg");
+  }
+
+  &.print{
+    background-image: url("/assets/css/icons/svg/oah_icons/oah-print.svg");
+  }
+
+  &.plus-circle {
+    background-image: url("/assets/css/icons/svg/oah_icons/oah-add-circle-large.svg");
+  }
+
+  &.mail-incoming {
+    background-image: url("/assets/css/icons/svg/oah_icons/oah-mail-incoming.svg");
+  }
+
+  &.settings {
+    background-image: url("/assets/css/icons/svg/oah_icons/oah-settings.svg");
+  }
+
+  &.settings-dotted {
+    background-image: url("/assets/css/icons/svg/oah_icons/oah-settings-dotted.svg");
+  }
+
+  &.copy {
+    background-image: url("/assets/css/icons/svg/oah_icons/oah-copy.svg");
+  }
+
+  &.plus {
+    background-image: url("/assets/css/icons/svg/oah_icons/oah-add-crm.svg");
+
+    &.black {
+      background-image: url("/assets/css/icons/svg/oah_icons/oah-add-crm-black.svg");
+    }
+  }
+
+  &.home {
+    background-image: url("/assets/css/icons/svg/oah_icons/oah-home.svg");
+  }
+
+
+  &.draggable {
+    width: 7.5px;
+    height: 22.5px;
+    background-image: url("/assets/css/icons/svg/oah_icons/oah-dragable.svg");
+    opacity: 0.4;
+  }
+
+  &.trash {
+    background-image: url("/assets/css/icons/svg/oah_icons/oah-trash.svg");
+  }
+
+  &.close {
+    width: 30px;
+    height: 30px;
+    background-image: url("/assets/css/icons/svg/ic-win-close.svg");
+  }
+
+  &.notice-orange {
+    background-image: url("/assets/css/icons/svg/oah_icons/oah-notice-orange.svg");
+  }
+
+  &.noticedenied-filled {
+    background-image: url("/assets/css/icons/svg/oah_icons/oah-noticedenied-filled.svg");
+  }
+
+  &.noticedenied-red {
+    background-image: url("/assets/css/icons/svg/oah_icons/oah-noticedenied-red.svg");
+  }
+
+  &.notice-green {
+    background-image: url("/assets/css/icons/svg/oah_icons/oah-noticegood2-green.svg");
+  }
+
+  &.brush {
+    background-image: url("/assets/css/icons/svg/oah_icons/oah-brush.svg");
+  }
+
+  &.user {
+    background-image: url("/assets/css/icons/svg/user_icon.svg");
+  }
+
+  &.key{
+    background-image: url("/assets/css/icons/svg/oah_icons/oah-key.svg");
+  }
+  &.devphone{
+    background-image: url("/assets/css/icons/svg/oah_icons/oah-devphone.svg");
+  }
+  &.mail-new{
+    background-image: url("/assets/css/icons/svg/oah_icons/oah-mail-new.svg");
+  }
+  &.spam{
+    background-image: url("/assets/css/icons/svg/oah_icons/oah-spam.svg");
+    &-grey{
+      background-image: url("/assets/css/icons/svg/oah_icons/oah-spam-grey.svg");
+    }
+  }
+  &.social {
+    &-vk {
+      background-image: url("/assets/css/icons/svg/oah_icons/oah-social-vk.svg");
+    }
+
+    &-ya {
+      background-image: url("/assets/css/icons/svg/oah_icons/oah-social-yax.svg");
+    }
+
+    &-fb {
+      background-image: url("/assets/css/icons/svg/oah_icons/oah-social-fb.svg");
+    }
+
+    &-ok {
+      background-image: url("/assets/css/icons/svg/oah_icons/oah-social-ok.svg");
+    }
+
+    &-tw {
+      background-image: url("/assets/css/icons/svg/oah_icons/oah-social-tw.svg");
+    }
+
+    &-gplus {
+      background-image: url("/assets/css/icons/svg/oah_icons/oah-social-gplus.svg");
+    }
+
+    &-mru {
+      background-image: url("/assets/css/icons/svg/oah_icons/oah-social-mru.svg");
+    }
+
+  }
+
+  &.flag{
+    &-ru{
+      width: 26px;
+      height: 18px;
+      background-image: url("/assets/css/icons/svg/flag-ru.svg");
+    }
+  }
+}

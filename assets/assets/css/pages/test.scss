@@ -1,0 +1,67 @@
+#test{
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  margin: 10px 0;
+  ul.questions{
+    display: grid;
+    grid-template-columns: repeat(4,60px);
+    grid-gap: 5px;
+    grid-auto-rows: 60px;
+    //align-items: center;
+    li{
+      display: flex;
+      background: #cacaca;
+      &.active, &:hover{
+        background: #ECECEC;
+      }
+      &.answered{
+        background: #6bd06b;
+      }
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .tab-content{
+    .question{
+      &-head{
+        margin-bottom: 10px;
+      }
+      &-title{
+        font-size: 24px;
+      }
+      &-options{
+      .options{
+        margin-top: 10px;
+      }
+      }
+    }
+  }
+}
+
+.test-head{
+  display: flex;
+  margin: 10px 0;
+  justify-content: space-between;
+  align-items: center;
+  .about{
+    .title{
+      margin: 5px 0;
+    }
+  }
+  .time {
+    >div{
+      margin: 10px 0;
+      text-align: right;
+    }
+  }
+}
+
+button.save{
+  padding: 10px;
+  background: #0098d6;
+  color: #fff;
+  box-shadow: none;
+  border:none;
+  cursor: pointer;
+}

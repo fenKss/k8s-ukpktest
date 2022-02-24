@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "ukpktest.assets" . }}
+  labels:
+    name: {{ include "ukpktest.assets" . }}
+    {{- include "ukpktest.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.assets.type }}
+  ports:
+    - port: {{ .Values.assets.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    name: {{ include "ukpktest.assets" . }}
+    {{- include "ukpktest.selectorLabels" . | nindent 4 }}

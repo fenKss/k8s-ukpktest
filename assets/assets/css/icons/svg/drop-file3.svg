@@ -1,0 +1,37 @@
+
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="66px" height="83px" viewBox="0 0 66 83" style="enable-background:new 0 0 66 83;" xml:space="preserve">
+<style type="text/css">
+	.st0{filter:url(#filter-2);}
+	.st2{fill:#A3A3A3;fill-opacity:0.2;}
+</style>
+<filter  filterUnits="objectBoundingBox" height="200%" id="filter-2" width="200%" x="-50%" y="-50%">
+	<feOffset  dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+	<feGaussianBlur  in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="1"></feGaussianBlur>
+	<feColorMatrix  in="shadowBlurOuter1" type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.202587183 0">
+		</feColorMatrix>
+</filter>
+<g>
+	<g transform="translate(-502.000000, -319.000000)">
+		<g transform="translate(360.000000, 290.000000)">
+			<g transform="translate(144.000000, 28.000000)">
+				<g>
+					<g class="st0">
+						<path d="M0,11C0,5.5,4.5,1,10,1h30l22,20v49c0,5.5-4.5,10-10,10l-42,0C4.5,80,0,75.5,0,70V11z"/>
+					</g>
+					<g>
+						<path fill="#fcfcfc" d="M0,11C0,5.5,4.5,1,10,1h30l22,20v49c0,5.5-4.5,10-10,10l-42,0C4.5,80,0,75.5,0,70V11z"/>
+					</g>
+				</g>
+				<path class="st2" d="M40,1l21.9,19.5v14.9L44,21.2c-2.2-1.7-3.9-5.3-3.9-8.1V1z"/>
+				<path fill="#D2D2D2" d="M40,1l22,20l-15,0c-3.9,0-7-3.1-7-7V1z"/>
+				<g>
+					<rect x="8" y="54" width="48" height="4" fill="#D2D2D2"/>
+					<rect x="8" y="61" width="48" height="4" fill="#D2D2D2"/>
+					<rect x="8" y="47" width="48" height="4" fill="#D2D2D2"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

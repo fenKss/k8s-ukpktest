@@ -1,0 +1,114 @@
+#test-editor {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 40px;
+}
+#test-editor aside > button {
+  position: absolute;
+  top: 2px;
+  right: 60px;
+}
+#test-editor .questions {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+#test-editor .questions li {
+  list-style: none;
+  padding: 5px;
+  border-bottom: 1px solid grey;
+  cursor: pointer;
+}
+#test-editor .questions li.selected {
+  color: #3c8dbc;
+}
+#test-editor div.tab[data-question-id] .question-head, #test-editor div.question .question-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#test-editor div.tab[data-question-id] .question-head .question-type, #test-editor div.question .question-head .question-type {
+  margin-left: 20px;
+}
+#test-editor div.tab[data-question-id] .question-head .question-title, #test-editor div.question .question-head .question-title {
+  font-size: 25px;
+}
+#test-editor div.tab[data-question-id] .question-head .question-title button, #test-editor div.question .question-head .question-title button {
+  display: none;
+}
+#test-editor div.tab[data-question-id] .question-head .question-title:hover button, #test-editor div.question .question-head .question-title:hover button {
+  display: inline;
+}
+#test-editor div.tab[data-question-id] .question-head .question-type, #test-editor div.question .question-head .question-type {
+  display: flex;
+  align-items: center;
+}
+#test-editor div.tab[data-question-id] .question-head .question-type span, #test-editor div.question .question-head .question-type span {
+  margin: 10px;
+}
+#test-editor div.tab[data-question-id] .question-options .question-options-head, #test-editor div.question .question-options .question-options-head {
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+}
+#test-editor div.tab[data-question-id] .question-options .question-options-head .add-option, #test-editor div.question .question-options .question-options-head .add-option {
+  margin-left: 5px;
+}
+#test-editor div.tab[data-question-id] .question-options .options, #test-editor div.question .question-options .options {
+  display: flex;
+  flex-direction: column;
+}
+#test-editor div.tab[data-question-id] .question-options .options label, #test-editor div.question .question-options .options label {
+  display: flex;
+  align-items: center;
+}
+#test-editor div.tab[data-question-id] .question-options .options label span, #test-editor div.question .question-options .options label span {
+  margin-left: 5px;
+}
+
+.options > div {
+  display: flex;
+}
+.options > div button {
+  margin-left: 10px;
+  display: none;
+}
+.options > div:hover button {
+  display: block;
+}
+
+.test-editor-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+}
+.test-editor-popup_wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  box-sizing: border-box;
+  width: 200px;
+  padding: 10px;
+}
+.test-editor-popup_header {
+  position: relative;
+}
+.test-editor-popup_header .popup-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.test-editor-popup_header .popup-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=testEditor.css.map */

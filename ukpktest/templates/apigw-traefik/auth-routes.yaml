@@ -1,0 +1,39 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: auth-routes
+spec:
+  routes:
+    - kind: Rule
+      match: PathPrefix(`/auth`) # Запросы с префиксом /auth отправляем в auth-service
+      services:
+        - name: {{ include "ukpktest.auth" .}}
+          namespace: default
+          port: 80
+      middlewares:
+        - name: strip-prefix # Убираем префикс из пути, чтобы запросы шли на корень сервиса
+          namespace: default
+    - kind: Rule
+      match: PathPrefix(`/assets`)
+      services:
+        - name: {{ include "ukpktest.assets" . }}
+          namespace: default
+          port: 80
+      middlewares:
+        - name: strip-prefix # Убираем префикс из пути, чтобы запросы шли на корень сервиса
+          namespace: default
+    - kind: Rule
+      match: PathPrefix(`/admin/user`)
+      services:
+        - name: {{ include "ukpktest.auth" . }}
+          namespace: default
+          port: 80
+    - kind: Rule
+      match: PathPrefix(`/`)
+      services:
+        - name: {{ include "ukpktest.main" . }}
+          namespace: default
+          port: 80
+      middlewares:
+        - name: auth # Включаем forward-auth
+          namespace: default

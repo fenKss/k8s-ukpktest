@@ -1,0 +1,91 @@
+main.user-cabinet {
+  .cabinet {
+    max-width: 1200px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-gap: 10px;
+    margin: auto;
+
+    .user {
+      &-info {
+        >*{
+          margin-bottom: 8px;
+        }
+        .avatar {
+          width: 220px;
+          height: 220px;
+          overflow: hidden;
+          position: relative;
+          border-radius: 50%;
+          margin-bottom: 10px;
+
+          img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+        .name{
+          display: flex;
+          justify-content: center;
+          span{
+            margin-left: 2px;
+            margin-right: 2px;
+          }
+        }
+
+        .mail {
+          text-align: center;
+        }
+        .edit{
+          display: flex;
+          justify-content: center;
+          a{
+            color:#22b8f0;
+            text-decoration: underline;
+          }
+        }
+
+      }
+
+      &-stat {
+        .olympics {
+          .title {
+            margin-bottom: 10px;
+            font-size: 18px;
+          }
+
+          .olympic {
+            .olympic-title {
+              text-align: center;
+              margin-bottom: 5px;
+              font-style: italic;
+            }
+
+            .tours {
+              table {
+                width: 100%;
+
+                th, td {
+                  padding: 5px;
+                }
+
+                th {
+                  font-weight: 600;
+                }
+
+                td {
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

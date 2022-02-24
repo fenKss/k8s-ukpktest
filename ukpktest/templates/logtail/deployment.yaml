@@ -1,0 +1,87 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "ukpktest.logtail" . }}
+  labels:
+    name: {{ include "ukpktest.logtail" . }}
+    {{- include "ukpktest.labels" . | nindent 4 }}
+spec:
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
+  revisionHistoryLimit: 0 # Default to 10 if not specified
+  selector:
+    matchLabels:
+      name: {{ include "ukpktest.logtail" . }}
+      {{- include "ukpktest.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        name: {{ include "ukpktest.logtail" . }}
+        {{- include "ukpktest.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "ukpktest.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.logtail.image.repository }}:{{ .Values.logtail.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.logtail.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          volumeMounts:
+            - name: {{ template "ukpktest.fullname" . }}-assets-auth
+              mountPath: /var/www/app
+          env:
+          {{- range $key, $value := .Values.logtail.env }}
+            - name: {{ $value.name }}
+              valueFrom:
+                secretKeyRef:
+                  key: {{ $value.key }}
+                  name: {{- include "ukpktest.secret" $ | indent 4 }}
+          {{- end }}
+      volumes:
+        {{- if .Values.logtail.develop.enabled }}
+        - name: {{ template "ukpktest.fullname" . }}-assets-auth
+          hostPath:
+            path: {{.Values.logtail.develop.pwd}}
+        {{- else }}
+        - name: {{ template "ukpktest.fullname" . }}-assets-auth
+          emptyDir: { }
+        {{ end }}
+      {{- if not .Values.logtail.develop.enabled }}
+      initContainers:
+        - name: {{ template "ukpktest.fullname" . }}-assets-auth
+          image: "{{ .Values.logtail.image.repository }}:{{ .Values.logtail.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.logtail.image.pullPolicy }}
+          command: ['sh', '-c', "cp -rT /tmp/app /var/www/app"]
+          volumeMounts:
+            - name: {{ template "ukpktest.fullname" . }}-assets-auth
+              mountPath: /var/www/app/
+      {{ end }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}

@@ -1,0 +1,127 @@
+#test-editor{
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 40px;
+  aside > button{
+    position: absolute;
+    top: 2px;
+    right: 60px;
+  }
+  .questions{
+    display: block;
+    margin: 0;
+    padding: 0;
+    li{
+      list-style: none;
+      padding: 5px;
+      border-bottom:1px solid grey;
+      cursor: pointer;
+      &.selected{
+        color:#3c8dbc;
+      }
+    }
+    .options{
+
+    }
+  }
+  div.tab[data-question-id], div.question{
+    .question-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .question-type{
+        margin-left: 20px;
+      }
+      .question-title {
+        font-size: 25px;
+
+        button {
+          display: none;
+        }
+
+        &:hover {
+          button {
+            display: inline;
+          }
+        }
+      }
+
+      .question-type {
+        display: flex;
+        align-items: center;
+
+        span {
+          margin: 10px;
+        }
+      }
+    }
+    .question-options{
+      .question-options-head {
+        font-size: 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid black;
+        padding-bottom: 5px;
+
+        .add-option{
+          margin-left: 5px;
+        }
+      }
+      .options{
+        display: flex;
+        flex-direction: column;
+        label{
+          display: flex;
+          align-items: center;
+          span{
+            margin-left:5px;
+          }
+        }
+      }
+    }
+
+  }
+}
+.options > div{
+  display: flex;
+  button{
+    margin-left: 10px;
+    display: none;
+  }
+  &:hover button{
+    display: block;
+  }
+}
+
+.test-editor-popup{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.2);
+  &_wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    box-sizing: border-box;
+    width: 200px;
+    padding: 10px;
+
+  }
+  &_header{
+    position: relative;
+    .popup-title{
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .popup-close{
+      position: absolute;
+      right: 0;
+      top: 0;
+      cursor: pointer;
+    }
+  }
+}

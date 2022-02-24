@@ -1,0 +1,1 @@
+php /var/www/app/bin/console kafka:listen

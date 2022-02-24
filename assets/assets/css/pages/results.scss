@@ -1,0 +1,30 @@
+main.results {
+  form > div {
+    margin: 15px 0;
+  }
+
+  .alert {
+    border-radius: 4px;
+    background: grey;
+    box-sizing: border-box;
+    padding: 4px;
+
+    &.danger {
+      background: red;
+    }
+
+    &.success {
+      background: #b6fdb6;
+    }
+  }
+
+  .questions > li {
+    &.success {
+      background: #6bd06b !important;
+    }
+
+    &.danger {
+      background: red !important;
+    }
+  }
+}
