@@ -51,7 +51,7 @@ class Authenticator extends AbstractLoginFormAuthenticator
             "x-auth-token" => $user->getAuthToken(),
             "x-username" => $user->getUserIdentifier(),
         ]);
-//        $response->headers->setCookie(Cookie::create('xau', $user->getAuthToken()));
+        $response->headers->setCookie(Cookie::create('xau', $user->getAuthToken()));
         return $response;
     }
 

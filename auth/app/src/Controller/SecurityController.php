@@ -22,7 +22,7 @@ class SecurityController extends AbstractController
              $response = (new RedirectResponse($request->query->get('ru', '/')));
              $response->headers->add([
                  "x-auth-token" => $user->getAuthToken(),
-                 "x-username" => $user->getUserIdentifier(),
+                 "x-username" => $user->getUsername(),
              ]);
              return $response;
          }

@@ -64,8 +64,8 @@ class MainController extends AbstractController
         if ($user){
             return $user;
         }
-        $token = $request->cookies->get('xau', null);
-        if (!$token){
+        $token = $request->headers->get('x-auth-token');
+        if (!$token) {
             return null;
         }
         return $this->userRepository->findOneBy([

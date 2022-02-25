@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "ukpktest.statistic" . }}
+  labels:
+    name: {{ include "ukpktest.statistic" . }}
+    {{- include "ukpktest.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.statisticService.type }}
+  ports:
+    - port: {{ .Values.statisticService.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    name: {{ include "ukpktest.statistic" . }}
+    {{- include "ukpktest.selectorLabels" . | nindent 4 }}

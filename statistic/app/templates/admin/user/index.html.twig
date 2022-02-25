@@ -1,0 +1,38 @@
+{% extends '/admin/base.html.twig' %}
+
+{% block title %}Пользователи{% endblock %}
+{% block boxTitle %}Список пользователей{% endblock %}
+
+{% block boxBody %}
+    <table class="table">
+        <tr>
+            <th>id</th>
+            <th>Имя</th>
+            <th>Роли</th>
+            <th></th>
+        </tr>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.name }}</td>
+                <td>
+                    {% for role in user.roles %}
+                        <div>
+                            {% if role == 'ROLE_USER' %}
+                                Пользователь
+                            {% elseif role== 'ROLE_ADMIN' %}
+                                Администратор
+                            {% elseif role ==  'ROLE_EDITOR' %}
+                                Редактор
+                            {% endif %}
+
+                        </div>
+                    {% endfor %}
+                </td>
+                <td class="btn-group">
+                    <a class="btn btn-sm btn-primary" href="{{ path('admin_user_edit', {'user': user.id}) }}"><i class="fa fa-edit"></i></a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
