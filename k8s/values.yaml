@@ -116,8 +116,6 @@ logtail:
       key: MAIN_DATABASE_URL
     - name: KAFKA_URL
       key: KAFKA_URL
-    - name: TELEGRAM_DSN
-      key: TELEGRAM_DSN
 
 authService:
   name: auth
