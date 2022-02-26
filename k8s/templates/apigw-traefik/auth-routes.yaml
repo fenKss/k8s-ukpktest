@@ -4,6 +4,14 @@ metadata:
   name: auth-routes
 spec:
   routes:
+    - match: PathPrefix(`/metrics`)
+      kind: Rule
+      services:
+        - name: prometheus@internal
+          kind: TraefikService
+      middlewares:
+        - name: strip-prefix
+          namespace: default
     - kind: Rule
       match: PathPrefix(`/auth`) # Запросы с префиксом /auth отправляем в auth-service
       services:
@@ -23,7 +31,7 @@ spec:
         - name: strip-prefix # Убираем префикс из пути, чтобы запросы шли на корень сервиса
           namespace: default
     - kind: Rule
-      match: PathPrefix(`/admin/user`)
+      match: PathPrefix(`/admin/user`, `/user`)
       services:
         - name: {{ include "ukpktest.auth" . }}
           namespace: default
@@ -31,6 +39,12 @@ spec:
       middlewares:
         - name: auth # Включаем forward-auth
           namespace: default
+    - kind: Rule
+      match: PathPrefix(`/api/user`)
+      services:
+        - name: {{ include "ukpktest.auth" . }}
+          namespace: default
+          port: 80
     - kind: Rule
       match: "PathPrefix(`/admin/tour/{id:[0-9]+}/results`)"
       services:

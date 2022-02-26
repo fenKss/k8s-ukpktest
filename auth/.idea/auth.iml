@@ -84,6 +84,9 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/doctrine/inflector" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/doctrine/doctrine-migrations-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/friendsofphp/proxy-manager-lts" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/serializer" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/nesbot/carbon" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/translation" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

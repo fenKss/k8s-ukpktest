@@ -30,10 +30,13 @@ dependencies:
     tags:
       - ukpktest-database
   - name: traefik
-    version: 10.1.2
+    version: 10.14.2
     repository: https://helm.traefik.io/traefik
     tags:
       - ukpktest-traefik
   - name: kafka
     version: 15.0.3
     repository: https://charts.bitnami.com/bitnami
+  - name: kube-prometheus-stack
+    version: 33.0.0
+    repository: https://prometheus-community.github.io/helm-charts

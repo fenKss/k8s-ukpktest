@@ -4,9 +4,12 @@ dependencies:
   version: 8.8.23
 - name: traefik
   repository: https://helm.traefik.io/traefik
-  version: 10.1.2
+  version: 10.14.2
 - name: kafka
   repository: https://charts.bitnami.com/bitnami
   version: 15.0.3
-digest: sha256:a82365dc562def1f9ddf8817e212c349efffa117811d6fc4fcb4a07631851b8f
-generated: "2022-02-24T21:38:06.028463812+03:00"
+- name: kube-prometheus-stack
+  repository: https://prometheus-community.github.io/helm-charts
+  version: 33.0.0
+digest: sha256:d689cca3fa1041ed5303bdf06c6cd1b4338b9342c04131200b24a60bcad4754b
+generated: "2022-02-26T13:23:56.545970357+03:00"
