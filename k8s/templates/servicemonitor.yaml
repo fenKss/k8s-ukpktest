@@ -1,0 +1,18 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: {{ include "ukpktest.fullname" . }}-servicemonitor
+  labels:
+    {{- include "ukpktest.labels" . | nindent 4 }}
+spec:
+  jobLabel: traefik-metrics
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: ukpktest
+      app.kubernetes.io/name: traefik
+  namespaceSelector:
+    matchNames:
+      - default
+  endpoints:
+    - targetPort: web
+      path: /metrics

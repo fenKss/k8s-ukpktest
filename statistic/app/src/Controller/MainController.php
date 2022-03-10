@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\User;
+use App\Service\KafkaService;
 use App\Repository\UserRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -13,7 +14,7 @@ use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 
 class MainController extends AbstractController
 {
-    private \App\Repository\UserRepository $userRepository;
+    private UserRepository $userRepository;
 
     public function __construct(UserRepository $userRepository)
     {
@@ -22,9 +23,9 @@ class MainController extends AbstractController
     /**
      * @Route("/admin/tour/{id}/results", name="jwks")
      */
-    public function jwks(Request $request)
+    public function jwks(int $id, Request $request, KafkaService $kafkaService)
     {
-        dd($request, $GLOBALS);
+        $kafkaService->listen();
     }
 
     /**

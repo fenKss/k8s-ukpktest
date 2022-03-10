@@ -69,23 +69,6 @@ mainService:
       key: MAIN_DATABASE_URL
     - name: KAFKA_URL
       key: KAFKA_URL
-statisticService:
-  name: main
-  image:
-    repository: statistic-ukpktest
-    tag: "latest"
-    pullPolicy: Never
-  type: ClusterIP
-  port: 80
-  develop:
-    enabled: true
-    pwd: "/hosthome/fenk/projects/k8s/ukpktest/statistic/app"
-  database: statistic
-  env:
-    - name: DATABASE_URL
-      key: STATISTIC_DATABASE_URL
-    - name: KAFKA_URL
-      key: KAFKA_URL
 
 assets:
   name: assets
