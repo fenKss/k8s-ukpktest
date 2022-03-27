@@ -4,6 +4,14 @@ metadata:
   name: auth-routes
 spec:
   routes:
+    - match: PathPrefix(`/metrics`)
+      kind: Rule
+      services:
+        - name: prometheus@internal
+          kind: TraefikService
+      middlewares:
+        - name: strip-prefix
+          namespace: default
     - kind: Rule
       match: PathPrefix(`/auth`) # Запросы с префиксом /auth отправляем в auth-service
       services:

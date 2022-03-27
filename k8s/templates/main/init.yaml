@@ -31,4 +31,4 @@ spec:
           command:
             - sh
             - "-c"
-            - {{ printf "mycli %s -e \"create database if not exists \\`%s\\`\" && php /tmp/app/bin/console doctrine:migrations:migrate --quiet" ( printf (include "db.url" .) "" ) .Values.mainService.database }}
+            - {{ printf "mycli %s -e \"create database if not exists \\`%s\\`\" && composer -d/tmp/app install && php /tmp/app/bin/console doctrine:migrations:migrate --quiet" ( printf (include "db.url" .) "" ) .Values.mainService.database }}

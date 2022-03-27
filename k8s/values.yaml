@@ -55,14 +55,14 @@ affinity: {}
 mainService:
   name: main
   image:
-    repository: main-ukpktest
+    repository: fenkss/main-ukpktest
     tag: "latest"
     pullPolicy: Never
   type: ClusterIP
   port: 80
   develop:
     enabled: true
-    pwd: "/hosthome/fenk/projects/k8s/ukpktest/main/app"
+    pwd: "/hosthome/mixail/projects/k8s-ukpktest/main/app"
   database: ukpktest
   env:
     - name: DATABASE_URL
@@ -73,26 +73,26 @@ mainService:
 assets:
   name: assets
   image:
-    repository: assets-ukpktest
+    repository: fenkss/assets-ukpktest
     tag: "latest"
     pullPolicy: Never
   type: ClusterIP
   port: 80
   develop:
     enabled: true
-    pwd: "/hosthome/fenk/projects/k8s/ukpktest/assets/assets"
+    pwd: "/hosthome/mixail/projects/k8s-ukpktest/assets/assets"
 
 logtail:
   name: main
   image:
-    repository: logtail-ukpktest
+    repository: fenkss/main-ukpktest
     tag: "latest"
     pullPolicy: Never
   type: ClusterIP
   port: 80
   develop:
     enabled: true
-    pwd: "/hosthome/fenk/projects/k8s/ukpktest/logtail/app"
+    pwd: "/hosthome/mixail/projects/k8s-ukpktest/logtail/app"
   database: logtail
   env:
     - name: DATABASE_URL
@@ -103,14 +103,14 @@ logtail:
 authService:
   name: auth
   image:
-    repository: auth-ukpktest
+    repository: fenkss/auth-ukpktest
     tag: "latest"
     pullPolicy: Never
   type: ClusterIP
   port: 80
   develop:
     enabled: true
-    pwd: "/hosthome/fenk/projects/k8s/ukpktest/auth/app"
+    pwd: "/hosthome/mixail/projects/k8s-ukpktest/auth/app"
   database: auth
   env:
     - name: DATABASE_URL
