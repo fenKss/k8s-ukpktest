@@ -37,6 +37,7 @@ class Notifier extends AbstractNotifier implements NotifierInterface
             ];
             $this->kafkaService->send('logtail', json_encode($data));
         } catch (Throwable $e) {
+            dd($e);
             return false;
         }
         return true;

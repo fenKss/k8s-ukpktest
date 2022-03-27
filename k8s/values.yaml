@@ -83,9 +83,9 @@ assets:
     pwd: "/hosthome/mixail/projects/k8s-ukpktest/assets/assets"
 
 logtail:
-  name: main
+  name: logtail
   image:
-    repository: fenkss/main-ukpktest
+    repository: fenkss/logtail-ukpktest
     tag: "latest"
     pullPolicy: Never
   type: ClusterIP
